@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "449069347890",
+    "project_id": "lmsapp-b2921",
+    "storage_bucket": "lmsapp-b2921.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:449069347890:android:71bf97418cd4449f9e382b",
+        "android_client_info": {
+          "package_name": "com.example.lms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "449069347890-g3adeui3vmomg1544hbfr9gb2o3rg7r4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD78kSNBG3i6kjozG31OcXMDDJi8SpDTL8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "449069347890-g3adeui3vmomg1544hbfr9gb2o3rg7r4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
