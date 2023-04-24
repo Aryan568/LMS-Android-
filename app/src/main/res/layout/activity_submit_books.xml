@@ -253,12 +253,15 @@
         </androidx.cardview.widget.CardView>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="325dp">
+                android:layout_height="325dp"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp">
 
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="50dp"
-                    android:text="ajsk"/>
+                    android:text="ajsk" />
 
                 <Button
                     android:id="@+id/b11"
@@ -279,7 +282,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="88dp"
-                    android:layout_marginTop="-47dp"
+                    android:layout_marginTop="47dp"
                     android:onClick="updateOnClick"
                     android:text="Update"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -293,8 +296,8 @@
                     android:id="@+id/b13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="186dp"
-                    android:layout_marginTop="-48dp"
+                    android:layout_marginTop="-10dp"
+                    android:layout_gravity="right"
                     android:text="Delete"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -307,7 +310,7 @@
                     android:id="@+id/b14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="282dp"
+                    android:layout_marginLeft="1dp"
                     android:layout_marginTop="-49dp"
                     android:text="Clear"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -316,6 +319,21 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.9" />
+
+                <Button
+                    android:id="@+id/b15"
+                    android:layout_width="45dp"
+                    android:layout_height="47dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="-100dp"
+                    android:layout_marginRight="10dp"
+                    android:text="S"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/stID"
+                    app:layout_constraintHorizontal_bias="0.346"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.061" />
 
 
             </LinearLayout>
