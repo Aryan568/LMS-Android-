@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SubmitBooks">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.086">
-
+        android:orientation="vertical">
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
             android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="50dp"
             android:backgroundTint="@color/purple_200"
             app:cardCornerRadius="30dp">
 
@@ -257,7 +251,73 @@
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-    </ScrollView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="325dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="ajsk"/>
+
+                <Button
+                    android:id="@+id/b11"
+                    android:layout_width="83dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Save"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.154"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.764" />
+
+                <Button
+                    android:id="@+id/b12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="88dp"
+                    android:layout_marginTop="-47dp"
+                    android:onClick="updateOnClick"
+                    android:text="Update"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.691"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.78" />
+
+                <Button
+                    android:id="@+id/b13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="186dp"
+                    android:layout_marginTop="-48dp"
+                    android:text="Delete"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.155"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.887" />
+
+                <Button
+                    android:id="@+id/b14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="282dp"
+                    android:layout_marginTop="-49dp"
+                    android:text="Clear"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.681"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.9" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+    </LinearLayout>
+</ScrollView>
