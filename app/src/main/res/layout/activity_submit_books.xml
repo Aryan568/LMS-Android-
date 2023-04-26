@@ -258,13 +258,6 @@
                 tools:layout_editor_absoluteX="0dp"
                 tools:layout_editor_absoluteY="0dp">
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="30dp"
-                    android:text="ajsk" />
-
                 <Button
                     android:id="@+id/b11"
                     android:layout_width="83dp"
