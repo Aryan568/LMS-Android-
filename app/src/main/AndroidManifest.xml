@@ -14,25 +14,28 @@
         android:theme="@style/Theme.LMS"
         tools:targetApi="31">
         <activity
+            android:name=".IssueTab"
+            android:exported="false" />
+        <activity
             android:name=".AddStudent"
             android:exported="false"
             android:label="Students"
-            android:parentActivityName=".Dashboard"/>
+            android:parentActivityName=".Dashboard" />
         <activity
             android:name=".SubmitBooks"
             android:exported="false"
             android:label="Submit Books"
-            android:parentActivityName=".Dashboard"/>
+            android:parentActivityName=".Dashboard" />
         <activity
             android:name=".IssueBooks"
             android:exported="false"
             android:label="Issue Books"
-            android:parentActivityName=".Dashboard"/>
+            android:parentActivityName=".Dashboard" />
         <activity
             android:name=".ManageBooks"
             android:exported="false"
             android:label="Manage Books"
-            android:parentActivityName=".Dashboard"/>
+            android:parentActivityName=".Dashboard" />
         <activity
             android:name=".Dashboard"
             android:exported="false"

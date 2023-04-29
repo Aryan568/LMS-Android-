@@ -30,7 +30,7 @@ public class Dashboard extends AppCompatActivity {
         issue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Dashboard.this, IssueBooks.class));
+                startActivity(new Intent(Dashboard.this, IssueTab.class));
             }
         });
         submit.setOnClickListener(new View.OnClickListener() {
