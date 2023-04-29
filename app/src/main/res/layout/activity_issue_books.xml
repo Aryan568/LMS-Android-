@@ -5,10 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".IssueBooks">
-        <com.google.android.material.tabs.TabLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -158,149 +155,155 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="@id/CourseSpin"
                             app:layout_constraintVertical_bias="0.362" />
-
-                        <androidx.cardview.widget.CardView
+                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="280dp"
-                            android:layout_marginTop="10dp"
-                            app:cardCornerRadius="30dp">
+                            android:layout_height="match_parent">
 
-                            <TextView
-                                android:id="@+id/textView10"
-                                android:layout_width="100dp"
-                                android:layout_height="30dp"
-                                android:layout_marginLeft="20dp"
-                                android:layout_marginTop="25dp"
-                                android:text="Student ID"
-                                android:textSize="20dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.051"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="@id/textView6"
-                                app:layout_constraintVertical_bias="0.161" />
-
-                            <EditText
-                                android:id="@+id/stID2"
+                            <androidx.cardview.widget.CardView
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="150dp"
-                                android:layout_marginTop="15dp"
-                                android:ems="10"
-                                android:hint="   s t u d e n t  I D"
-                                android:inputType="number"
-                                android:textStyle="bold|italic"
+                                android:layout_height="280dp"
+                                app:cardCornerRadius="30dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.85"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="@id/fName"
-                                app:layout_constraintVertical_bias="0.153" />
+                                app:layout_constraintTop_toTopOf="parent">
 
-                            <TextView
-                                android:id="@+id/textView9"
-                                android:layout_width="100dp"
-                                android:layout_height="30dp"
-                                android:layout_marginLeft="20dp"
-                                android:layout_marginTop="80dp"
-                                android:text="Name"
-                                android:textSize="20dp"
-                                app:layout_constraintBottom_toBottomOf="@id/textView8"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.051"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintVertical_bias="0.563" />
+                                <TextView
+                                    android:id="@+id/textView10"
+                                    android:layout_width="100dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="25dp"
+                                    android:text="Student ID"
+                                    android:textSize="20dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.051"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="@id/textView6"
+                                    app:layout_constraintVertical_bias="0.161" />
 
-                            <EditText
-                                android:id="@+id/stID3"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="150dp"
-                                android:layout_marginTop="70dp"
-                                android:ems="10"
-                                android:hint="   n a m e"
-                                android:inputType="number"
-                                android:textStyle="bold|italic"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.85"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="@id/fName"
-                                app:layout_constraintVertical_bias="0.153" />
+                                <EditText
+                                    android:id="@+id/stID2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="150dp"
+                                    android:layout_marginTop="15dp"
+                                    android:ems="10"
+                                    android:hint="   s t u d e n t  I D"
+                                    android:inputType="number"
+                                    android:textStyle="bold|italic"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.85"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="@id/fName"
+                                    app:layout_constraintVertical_bias="0.153" />
 
-                            <TextView
-                                android:id="@+id/textView11"
-                                android:layout_width="100dp"
-                                android:layout_height="30dp"
-                                android:layout_marginLeft="20dp"
-                                android:layout_marginTop="135dp"
-                                android:text="Course"
-                                android:textSize="20dp"
-                                app:layout_constraintBottom_toBottomOf="@id/textView7"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.051"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="@id/textView9"
-                                app:layout_constraintVertical_bias="0.456" />
+                                <TextView
+                                    android:id="@+id/textView9"
+                                    android:layout_width="100dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="80dp"
+                                    android:text="Name"
+                                    android:textSize="20dp"
+                                    app:layout_constraintBottom_toBottomOf="@id/textView8"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.051"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.563" />
 
-                            <Spinner
-                                android:id="@+id/CourseSpin"
-                                android:layout_width="215dp"
-                                android:layout_height="48dp"
-                                android:layout_marginLeft="150dp"
-                                android:layout_marginTop="125dp"
-                                app:layout_constraintBottom_toBottomOf="@id/lName"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.849"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="@id/YearSpin"
-                                app:layout_constraintVertical_bias="0.47" />
+                                <EditText
+                                    android:id="@+id/stID3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="150dp"
+                                    android:layout_marginTop="70dp"
+                                    android:ems="10"
+                                    android:hint="   n a m e"
+                                    android:inputType="number"
+                                    android:textStyle="bold|italic"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.85"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="@id/fName"
+                                    app:layout_constraintVertical_bias="0.153" />
 
-                            <TextView
-                                android:id="@+id/textView12"
-                                android:layout_width="100dp"
-                                android:layout_height="30dp"
-                                android:layout_marginLeft="20dp"
-                                android:layout_marginTop="185dp"
-                                android:text="Year"
-                                android:textSize="20dp"
-                                app:layout_constraintBottom_toBottomOf="@id/textView8"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.051"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintVertical_bias="0.563" />
+                                <TextView
+                                    android:id="@+id/textView11"
+                                    android:layout_width="100dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="135dp"
+                                    android:text="Course"
+                                    android:textSize="20dp"
+                                    app:layout_constraintBottom_toBottomOf="@id/textView7"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.051"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="@id/textView9"
+                                    app:layout_constraintVertical_bias="0.456" />
 
-                            <Spinner
-                                android:id="@+id/YearSpin"
-                                android:layout_width="215dp"
-                                android:layout_height="48dp"
-                                android:layout_marginLeft="150dp"
-                                android:layout_marginTop="177dp"
-                                app:layout_constraintBottom_toBottomOf="@id/CourseSpin"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.849"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintVertical_bias="0.58" />
+                                <Spinner
+                                    android:id="@+id/CourseSpin"
+                                    android:layout_width="215dp"
+                                    android:layout_height="48dp"
+                                    android:layout_marginLeft="150dp"
+                                    android:layout_marginTop="125dp"
+                                    app:layout_constraintBottom_toBottomOf="@id/lName"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.849"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="@id/YearSpin"
+                                    app:layout_constraintVertical_bias="0.47" />
 
-                            <Button
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="bottom"
-                                android:layout_marginBottom="5dp"
-                                android:layout_marginLeft="60dp"
-                                android:text="Issue" />
+                                <TextView
+                                    android:id="@+id/textView12"
+                                    android:layout_width="100dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="185dp"
+                                    android:text="Year"
+                                    android:textSize="20dp"
+                                    app:layout_constraintBottom_toBottomOf="@id/textView8"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.051"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.563" />
 
-                            <Button
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="bottom"
-                                android:layout_marginBottom="5dp"
-                                android:layout_marginLeft="220dp"
-                                android:text="Clear"/>
-                        </androidx.cardview.widget.CardView>
+                                <Spinner
+                                    android:id="@+id/YearSpin"
+                                    android:layout_width="215dp"
+                                    android:layout_height="48dp"
+                                    android:layout_marginLeft="150dp"
+                                    android:layout_marginTop="177dp"
+                                    app:layout_constraintBottom_toBottomOf="@id/CourseSpin"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.849"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.58" />
+
+                                <Button
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:layout_marginLeft="60dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:text="Issue" />
+
+                                <Button
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:layout_marginLeft="220dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:text="Clear" />
+                            </androidx.cardview.widget.CardView>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
