@@ -8,7 +8,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="10dp"
+        android:paddingHorizontal="35dp"
+        android:paddingVertical="25dp"
         tools:context=".Dashboard">
 
         <androidx.cardview.widget.CardView
@@ -62,7 +63,7 @@
                         android:layout_height="30dp"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="195dp"
-                        android:text="i"
+                        android:text="issue"
                         android:textSize="20dp" />
                 </FrameLayout>
 
