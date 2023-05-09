@@ -8,14 +8,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="20dp"
-    android:paddingBottom="20dp"
-    android:padding="30dp"
+    android:paddingHorizontal="48dp"
+    android:layout_gravity="center"
     tools:context=".Dashboard">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="300dp"
-        android:layout_height="500dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,8 +27,8 @@
             android:orientation="vertical">
 
             <FrameLayout
-                android:layout_width="132dp"
-                android:layout_height="245dp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
                 <ImageButton
                     android:id="@+id/btn_manageBooks"
@@ -48,8 +47,8 @@
             </FrameLayout>
 
             <FrameLayout
-                android:layout_width="132dp"
-                android:layout_height="245dp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
                 <ImageButton
                     android:id="@+id/btn_submitBook"
@@ -79,8 +78,8 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <FrameLayout
-                android:layout_width="132dp"
-                android:layout_height="245dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="right">
 
                 <ImageButton
@@ -101,8 +100,8 @@
             </FrameLayout>
 
             <FrameLayout
-                android:layout_width="132dp"
-                android:layout_height="245dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="right">
 
                 <ImageButton
