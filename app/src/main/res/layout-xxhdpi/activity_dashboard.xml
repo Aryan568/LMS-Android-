@@ -7,7 +7,7 @@
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:paddingHorizontal="48dp"
     android:layout_gravity="center"
     tools:context=".Dashboard">
@@ -34,16 +34,15 @@
                     android:id="@+id/btn_manageBooks"
                     android:layout_width="wrap_content"
                     android:layout_height="245dp"
-                    android:layout_weight="1"
                     app:srcCompat="@drawable/ic_launcher_foreground" />
 
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="50dp"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="180dp"
                     android:text="manage books"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
             </FrameLayout>
 
             <FrameLayout
@@ -54,16 +53,15 @@
                     android:id="@+id/btn_submitBook"
                     android:layout_width="wrap_content"
                     android:layout_height="245dp"
-                    android:layout_weight="1"
                     app:srcCompat="@drawable/ic_launcher_foreground" />
 
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="30dp"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="200dp"
                     android:text="submit"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
             </FrameLayout>
 
         </LinearLayout>
@@ -87,16 +85,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="245dp"
                     android:layout_gravity="right"
-                    android:layout_weight="1"
                     app:srcCompat="@drawable/ic_launcher_foreground" />
 
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="30dp"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="200dp"
                     android:text="issue"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
             </FrameLayout>
 
             <FrameLayout
@@ -109,16 +106,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="245dp"
                     android:layout_gravity="right"
-                    android:layout_weight="1"
                     app:srcCompat="@drawable/ic_launcher_foreground" />
 
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="50dp"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="180dp"
                     android:text="student profile"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
             </FrameLayout>
         </LinearLayout>
 
