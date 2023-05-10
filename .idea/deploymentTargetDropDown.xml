@@ -13,13 +13,23 @@
       </Target>
     </targetSelectedWithDropDown>
     <timeTargetWasSelectedWithDropDown value="2023-05-09T04:04:21.083522900Z" />
+    <multipleDevicesSelectedInDropDown value="true" />
     <targetsSelectedWithDialog>
       <Target>
         <type value="QUICK_BOOT_TARGET" />
         <deviceKey>
           <Key>
             <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\aryan\.android\avd\Galaxy_Nexus_API_30_normal.avd" />
+            <value value="C:\Users\aryan\.android\avd\Nexus_5_xxhdpi.avd" />
+          </Key>
+        </deviceKey>
+      </Target>
+      <Target>
+        <type value="QUICK_BOOT_TARGET" />
+        <deviceKey>
+          <Key>
+            <type value="VIRTUAL_DEVICE_PATH" />
+            <value value="C:\Users\aryan\.android\avd\Horizontal_Fold-in_xxhdpi.avd" />
           </Key>
         </deviceKey>
       </Target>
