@@ -76,7 +76,7 @@
                         app:layout_constraintVertical_bias="0.255" />
 
                     <EditText
-                        android:id="@+id/fName"
+                        android:id="@+id/etTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="150dp"
@@ -108,7 +108,7 @@
                         app:layout_constraintVertical_bias="0.353" />
 
                     <EditText
-                        android:id="@+id/lName"
+                        android:id="@+id/etAuthor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="150dp"
@@ -140,13 +140,13 @@
                         app:layout_constraintVertical_bias="0.456" />
 
                     <EditText
-                        android:id="@+id/category"
+                        android:id="@+id/etCategory"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="150dp"
                         android:layout_marginTop="-37dp"
                         android:ems="10"
-                        android:hint="   a u t h o r"
+                        android:hint="   c a t e g o r y"
                         android:inputType="textPersonName"
                         android:textStyle="bold|italic"
                         app:layout_constraintBottom_toBottomOf="@id/fName"
@@ -178,7 +178,7 @@
                             app:layout_constraintVertical_bias="0.161" />
 
                         <EditText
-                            android:id="@+id/stID2"
+                            android:id="@+id/etStudentID"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="150dp"
@@ -210,7 +210,7 @@
                             app:layout_constraintVertical_bias="0.563" />
 
                         <EditText
-                            android:id="@+id/stID3"
+                            android:id="@+id/etName"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="150dp"
@@ -283,6 +283,7 @@
                             app:layout_constraintVertical_bias="0.58" />
 
                         <Button
+                            android:id="@+id/btnIssue"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
@@ -291,6 +292,7 @@
                             android:text="Issue" />
 
                         <Button
+                            android:id="@+id/btnClear"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
