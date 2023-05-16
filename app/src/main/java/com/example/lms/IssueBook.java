@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -30,6 +31,7 @@ Button issue, clear;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
         View view= inflater.inflate(R.layout.fragment_issue_book, container, false);
         bookid= view.findViewById(R.id.etBookID);
         title= view.findViewById(R.id.etTitle);
@@ -97,7 +99,19 @@ Button issue, clear;
             String isuYearSpin= YearSpin.getSelectedItem().toString();
 
             DatabaseReference reference= FirebaseDatabase.getInstance().getReference();
+            DatabaseReference child= reference.child("isuBook");
+            DatabaseReference IsuDB= child.child(isuBook);
 
+            IsuDB.child("BookID").setValue(isuBook);
+            IsuDB.child("Title").setValue(isuTitle);
+            IsuDB.child("Author").setValue(isuAuthor);
+            IsuDB.child("Category").setValue(isuCategory);
+            IsuDB.child("StudentID").setValue(isuStudentid);
+            IsuDB.child("Stu Name").setValue(isuName);
+            IsuDB.child("Course").setValue(isuCourseSpin);
+            IsuDB.child("Year").setValue(isuYearSpin);
+
+            Toast.makeText(getContext(), "Issued successfully", Toast.LENGTH_SHORT).show();
         }
     }
 
