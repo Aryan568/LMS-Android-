@@ -14,7 +14,7 @@
         android:theme="@style/Theme.LMS"
         tools:targetApi="31">
         <activity
-            android:name=".IssueTab"
+            android:name=".IssueBook"
             android:exported="false" />
         <activity
             android:name=".AddStudent"

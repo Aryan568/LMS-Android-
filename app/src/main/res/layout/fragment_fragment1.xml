@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".IssueBook">
+    tools:context=".fragment1">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -217,7 +217,7 @@
                             android:layout_marginTop="60dp"
                             android:ems="10"
                             android:hint="   n a m e"
-                            android:inputType="number"
+                            android:inputType="textPersonName"
                             android:textStyle="bold|italic"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -305,5 +305,6 @@
 
         </LinearLayout>
     </ScrollView>
+
 
 </FrameLayout>
