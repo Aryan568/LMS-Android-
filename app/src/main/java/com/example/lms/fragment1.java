@@ -41,7 +41,7 @@ public class fragment1 extends Fragment {
         category= v.findViewById(R.id.etCategory);
         studentid= v.findViewById(R.id.etStudentID);
         name= v.findViewById(R.id.etName);
-        CourseSpins= v.findViewById(R.id.CourseSpin);
+        CourseSpins= v.getRootView().findViewById(R.id.CourseSpin);
         YearSpins= v.findViewById(R.id.YearSpin);
         issue= v.findViewById(R.id.btnIssue);
         clear= v.findViewById(R.id.btnClear);
@@ -178,13 +178,14 @@ public class fragment1 extends Fragment {
     }
 
     private void chkDetailsDB() {
+
         String isuBook= bookid.getText().toString();
         String isuTitle=title.getText().toString();
         String isuAuthor= author.getText().toString();
         String isuCategory= category.getText().toString();
         String isuStudentid= studentid.getText().toString();
         String isuName= name.getText().toString();
-        String isuCourseSpin=CourseSpins.getSelectedItem().toString();
+        String isuCourseSpin= CourseSpins.getSelectedItem().toString();
         String isuYearSpin= YearSpins.getSelectedItem().toString();
 
         reference= FirebaseDatabase.getInstance().getReference("id");
@@ -197,9 +198,9 @@ public class fragment1 extends Fragment {
         DatabaseReference child= reference2.child("IssuedBook");
         DatabaseReference issueDB= child.child(isuBook);
 
-        reference3= FirebaseDatabase.getInstance().getReference();
-        DatabaseReference childs= reference3.child("Issuer");
-        DatabaseReference issueDBS= childs.child(isuStudentid);
+//        reference3= FirebaseDatabase.getInstance().getReference();
+//        DatabaseReference childs= reference3.child("Issuer");
+        DatabaseReference issueDBS= child.child(isuStudentid);
 
         chkBookDB.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -252,20 +253,21 @@ public class fragment1 extends Fragment {
                     String yearDB= snapshot.child(isuStudentid).child("Year").getValue(String.class);
                     if (nameDB.equals(isuName)){
                         studentid.setError(null);
-                        if (courseDB.equals(isuCourseSpin)){
-                            studentid.setError(null);
-                            if (yearDB.equals(isuYearSpin)){
-                                studentid.setError(null);
-                                issueDBS.child("StudentID").setValue(isuStudentid);
-                                issueDBS.child("Name").setValue(isuName);
-                                issueDBS.child("Course").setValue(isuCourseSpin);
-                                issueDBS.child("Year").setValue(isuYearSpin);
-                            } else{
-                                ((TextView)YearSpins.getSelectedView()).setError("not exist");
-                            }
-                        } else{
-                            ((TextView)CourseSpins.getSelectedView()).setError("not exist");
-                        }
+                        issueDBS.child("StudentID").setValue(isuStudentid);
+                        issueDBS.child("Name").setValue(isuName);
+                        issueDBS.child("Course").setValue(isuCourseSpin);
+                        issueDBS.child("Year").setValue(isuYearSpin);
+//                        if (courseDB.equals(isuCourseSpin)){
+//                            studentid.setError(null);
+//                            if (yearDB.equals(isuYearSpin)){
+//                                studentid.setError(null);
+//
+//                            } else{
+//                                ((TextView)YearSpins.getSelectedView()).setError("not exist");
+//                            }
+//                        } else{
+//                            ((TextView)CourseSpins.getSelectedView()).setError("not exist");
+//                        }
                     } else{
                         name.setError("not exist");
                     }
