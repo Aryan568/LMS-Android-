@@ -200,7 +200,7 @@ public class fragment1 extends Fragment {
 
 //        reference3= FirebaseDatabase.getInstance().getReference();
 //        DatabaseReference childs= reference3.child("Issuer");
-        DatabaseReference issueDBS= child.child(isuStudentid);
+//        DatabaseReference issueDBS= child.child(isuStudentid);
 
         chkBookDB.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -253,10 +253,10 @@ public class fragment1 extends Fragment {
                     String yearDB= snapshot.child(isuStudentid).child("Year").getValue(String.class);
                     if (nameDB.equals(isuName)){
                         studentid.setError(null);
-                        issueDBS.child("StudentID").setValue(isuStudentid);
-                        issueDBS.child("Name").setValue(isuName);
-                        issueDBS.child("Course").setValue(isuCourseSpin);
-                        issueDBS.child("Year").setValue(isuYearSpin);
+                        issueDB.child("StudentID").setValue(isuStudentid);
+                        issueDB.child("Name").setValue(isuName);
+                        issueDB.child("Course").setValue(isuCourseSpin);
+                        issueDB.child("Year").setValue(isuYearSpin);
 //                        if (courseDB.equals(isuCourseSpin)){
 //                            studentid.setError(null);
 //                            if (yearDB.equals(isuYearSpin)){
