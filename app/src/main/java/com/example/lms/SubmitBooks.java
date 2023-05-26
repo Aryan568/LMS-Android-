@@ -25,6 +25,8 @@ public class SubmitBooks extends AppCompatActivity {
     Spinner CourseSpins, YearSpins;
     Button submit, clear;
     View v;
+    String key="";
+    long maxid=0;
     DatabaseReference reference, reference1, reference2, reference3;
 
     @Override
@@ -65,7 +67,18 @@ public class SubmitBooks extends AppCompatActivity {
                 YearSpins.setSelection(0);
             }
         });
+        reference= FirebaseDatabase.getInstance().getReference().child("IssuedBook");
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) maxid= snapshot.getChildrenCount();
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -184,8 +197,8 @@ public class SubmitBooks extends AppCompatActivity {
         String isuCourseSpin= CourseSpins.getSelectedItem().toString();
         String isuYearSpin= YearSpins.getSelectedItem().toString();
 
-        reference= FirebaseDatabase.getInstance().getReference("IssuedBook");
-        Query chkBookDB= reference.orderByChild("BookID").equalTo(isuBook);
+        reference= FirebaseDatabase.getInstance().getReference().child("IssuedBook").child(String.valueOf(maxid+1));
+        Query chkBookDB= reference.orderByChild("bookID").equalTo(isuBook);
 
         chkBookDB.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -210,7 +223,8 @@ public class SubmitBooks extends AppCompatActivity {
                                 if (studentDB.equals(isuStudentid)){
                                     bookid.setError(null);
                                     if (nameDB.equals(isuName)){
-                                        deleteDetailsDB();
+//                                        deleteDetailsDB();
+
 //                                        if (courseDB.equals(isuCourseSpin)){
 //                                            bookid.setError(null);
 //                                            if (yearDB.equals(isuYearSpin)){
@@ -251,20 +265,24 @@ public class SubmitBooks extends AppCompatActivity {
     private void deleteDetailsDB() {
         String isuBook= bookid.getText().toString();
 
-        reference= FirebaseDatabase.getInstance().getReference();
-        reference1= reference.child("IssuedBook").child(isuBook);
 
-        reference1.removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
+
+
+        reference.removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
-                bookid.setText("");
-                title.setText("");
-                author.setText("");
-                category.setText("");
-                studentid.setText("");
-                name.setText("");
-                CourseSpins.setSelection(0);
-                YearSpins.setSelection(0);
+//                bookid.setText("");
+//                title.setText("");
+//                author.setText("");
+//                category.setText("");
+//                studentid.setText("");
+//                name.setText("");
+//                CourseSpins.setSelection(0);
+//                YearSpins.setSelection(0);
+                if (reference.child(String.valueOf(maxid+1)).child("bookID").equals(isuBook)){
+                    reference.child(String.valueOf(maxid+1)).setValue(null);
+                }
+
             }
         });
     }

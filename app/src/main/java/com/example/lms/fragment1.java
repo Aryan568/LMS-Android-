@@ -28,7 +28,12 @@ public class fragment1 extends Fragment {
     Spinner CourseSpins, YearSpins;
     Button issue, clear;
     View v;
-    DatabaseReference reference, reference1, reference2, reference3;
+    fragBookStu bookStu;
+//    fragStudent student;
+    boolean flag= false;
+//    long maxid=0;
+
+    DatabaseReference reference, reference1, reference2, reff;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -55,6 +60,9 @@ public class fragment1 extends Fragment {
         ArrayAdapter<String> year1= new ArrayAdapter<>(getContext(), androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, year);
         YearSpins.setAdapter(year1);
 
+
+
+
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,13 +77,157 @@ public class fragment1 extends Fragment {
             }
         });
 
+        reff= FirebaseDatabase.getInstance().getReference().child("IssuedBook");
+//        reff.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                if (snapshot.exists()) maxid= snapshot.getChildrenCount();
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//
+//            }
+//        });
         issue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(!validBID() | !validTitle() | !validAuthor() | !validCategory() | !validSID() | !validName() | !validCourse() | !validYear()){
 
                 }
-                else chkDetailsDB();
+                else {
+                    String isuBook= bookid.getText().toString();
+                    String isuTitle=title.getText().toString();
+                    String isuAuthor= author.getText().toString();
+                    String isuCategory= category.getText().toString();
+                    String isuStudentid= studentid.getText().toString();
+                    String isuName= name.getText().toString();
+                    String isuCourseSpin= CourseSpins.getSelectedItem().toString();
+                    String isuYearSpin= YearSpins.getSelectedItem().toString();
+
+                    reference= FirebaseDatabase.getInstance().getReference("id");
+                    Query chkBookDB= reference.orderByChild("bookno").equalTo(isuBook);
+                                                
+
+                    reference1= FirebaseDatabase.getInstance().getReference("sID");
+                    Query chkStudentDB= reference1.orderByChild("ID").equalTo(isuStudentid);
+
+//                    reference2= FirebaseDatabase.getInstance().getReference();
+//                    DatabaseReference child= reference2.child("IssuedBook");
+//                    DatabaseReference issueDB= child.child(isuBook);
+
+//        reference3= FirebaseDatabase.getInstance().getReference();
+//        DatabaseReference childs= reference3.child("Issuer");
+//        DatabaseReference issueDBS= child.child(isuStudentid);
+
+                    chkBookDB.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            if (snapshot.exists()){
+                                bookid.setError(null);
+                                String bookDB= snapshot.child(isuBook).child("bookno").getValue(String.class);
+                                String titleDB= snapshot.child(isuBook).child("title").getValue(String.class);
+                                String authorDB= snapshot.child(isuBook).child("author").getValue(String.class);
+                                String categoryDB= snapshot.child(isuBook).child("category").getValue(String.class);
+                                if (titleDB.equals(isuTitle)){
+                                    bookid.setError(null);
+                                    if (authorDB.equals(isuAuthor)){
+                                        bookid.setError(null);
+                                        if (categoryDB.equals(isuCategory)){
+                                            bookid.setError(null);
+
+//                                            issueDB.child("BookID").setValue(isuBook);
+//                                            issueDB.child("Title").setValue(isuTitle);
+//                                            issueDB.child("Author").setValue(isuAuthor);
+//                                            issueDB.child("Category").setValue(isuCategory);
+                                            flag=true;
+                                        }
+                                        else{
+                                            category.setError("not exist");
+                                        }
+                                    } else{
+                                        author.setError("not exist");
+                                    }
+                                } else{
+                                    title.setError("not exist");
+                                }
+                            } else{
+                                bookid.setError("not exist");
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                        }
+                    });
+
+                    chkStudentDB.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            if (snapshot.exists()){
+                                studentid.setError(null);
+                                String studentDB= snapshot.child(isuStudentid).child("ID").getValue(String.class);
+                                String nameDB= snapshot.child(isuStudentid).child("F Name").getValue(String.class);
+                                String courseDB= snapshot.child(isuStudentid).child("Course").getValue(String.class);
+                                String yearDB= snapshot.child(isuStudentid).child("Year").getValue(String.class);
+                                if (nameDB.equals(isuName)){
+                                    studentid.setError(null);
+//                                    issueDB.child("StudentID").setValue(isuStudentid);
+//                                    issueDB.child("Name").setValue(isuName);
+//                                    issueDB.child("Course").setValue(isuCourseSpin);
+//                                    issueDB.child("Year").setValue(isuYearSpin);
+                                    flag=true;
+
+//                        if (courseDB.equals(isuCourseSpin)){
+//                            studentid.setError(null);
+//                            if (yearDB.equals(isuYearSpin)){
+//                                studentid.setError(null);
+//
+//                            } else{
+//                                ((TextView)YearSpins.getSelectedView()).setError("not exist");
+//                            }
+//                        } else{
+//                            ((TextView)CourseSpins.getSelectedView()).setError("not exist");
+//                        }
+                                } else{
+                                    name.setError("not exist");
+                                }
+                            } else{
+                                studentid.setError("not exist");
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
+                };
+                fragBookStu bookStu= new fragBookStu();
+                if (flag){
+                    String isuBook= bookid.getText().toString();
+                    String isuTitle=title.getText().toString();
+                    String isuAuthor= author.getText().toString();
+                    String isuCategory= category.getText().toString();
+                    String isuStudentid= studentid.getText().toString();
+                    String isuName= name.getText().toString();
+                    String isuCourseSpin= CourseSpins.getSelectedItem().toString();
+                    String isuYearSpin= YearSpins.getSelectedItem().toString();
+
+                    String key= reff.push().getKey();
+                    bookStu.setBookID(isuBook);
+                    bookStu.setTitle(isuTitle);
+                    bookStu.setAuthor(isuAuthor);
+                    bookStu.setCategory(isuCategory);
+                    bookStu.setStudentID(isuStudentid);
+                    bookStu.setName(isuName);
+                    bookStu.setCourse(isuCourseSpin);
+                    bookStu.setYear(isuYearSpin);
+
+//                    reff.child(String.valueOf(maxid+1)).setValue(bookStu);
+                    reff.child(key).setValue(bookStu);
+                    flag=false;
+                }
             }
         });
         return v;
@@ -179,107 +331,6 @@ public class fragment1 extends Fragment {
 
     private void chkDetailsDB() {
 
-        String isuBook= bookid.getText().toString();
-        String isuTitle=title.getText().toString();
-        String isuAuthor= author.getText().toString();
-        String isuCategory= category.getText().toString();
-        String isuStudentid= studentid.getText().toString();
-        String isuName= name.getText().toString();
-        String isuCourseSpin= CourseSpins.getSelectedItem().toString();
-        String isuYearSpin= YearSpins.getSelectedItem().toString();
 
-        reference= FirebaseDatabase.getInstance().getReference("id");
-        Query chkBookDB= reference.orderByChild("bookno").equalTo(isuBook);
-
-        reference1= FirebaseDatabase.getInstance().getReference("sID");
-        Query chkStudentDB= reference1.orderByChild("ID").equalTo(isuStudentid);
-
-        reference2= FirebaseDatabase.getInstance().getReference();
-        DatabaseReference child= reference2.child("IssuedBook");
-        DatabaseReference issueDB= child.child(isuBook);
-
-//        reference3= FirebaseDatabase.getInstance().getReference();
-//        DatabaseReference childs= reference3.child("Issuer");
-//        DatabaseReference issueDBS= child.child(isuStudentid);
-
-        chkBookDB.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()){
-                    bookid.setError(null);
-                    String bookDB= snapshot.child(isuBook).child("bookno").getValue(String.class);
-                    String titleDB= snapshot.child(isuBook).child("title").getValue(String.class);
-                    String authorDB= snapshot.child(isuBook).child("author").getValue(String.class);
-                    String categoryDB= snapshot.child(isuBook).child("category").getValue(String.class);
-                    if (titleDB.equals(isuTitle)){
-                        bookid.setError(null);
-                        if (authorDB.equals(isuAuthor)){
-                            bookid.setError(null);
-                            if (categoryDB.equals(isuCategory)){
-                                bookid.setError(null);
-
-                                issueDB.child("BookID").setValue(isuBook);
-                                issueDB.child("Title").setValue(isuTitle);
-                                issueDB.child("Author").setValue(isuAuthor);
-                                issueDB.child("Category").setValue(isuCategory);
-                            }
-                            else{
-                                category.setError("not exist");
-                            }
-                        } else{
-                            author.setError("not exist");
-                        }
-                    } else{
-                        title.setError("not exist");
-                    }
-                } else{
-                    bookid.setError("not exist");
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-            }
-        });
-
-        chkStudentDB.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()){
-                    studentid.setError(null);
-                    String studentDB= snapshot.child(isuStudentid).child("ID").getValue(String.class);
-                    String nameDB= snapshot.child(isuStudentid).child("F Name").getValue(String.class);
-                    String courseDB= snapshot.child(isuStudentid).child("Course").getValue(String.class);
-                    String yearDB= snapshot.child(isuStudentid).child("Year").getValue(String.class);
-                    if (nameDB.equals(isuName)){
-                        studentid.setError(null);
-                        issueDB.child("StudentID").setValue(isuStudentid);
-                        issueDB.child("Name").setValue(isuName);
-                        issueDB.child("Course").setValue(isuCourseSpin);
-                        issueDB.child("Year").setValue(isuYearSpin);
-//                        if (courseDB.equals(isuCourseSpin)){
-//                            studentid.setError(null);
-//                            if (yearDB.equals(isuYearSpin)){
-//                                studentid.setError(null);
-//
-//                            } else{
-//                                ((TextView)YearSpins.getSelectedView()).setError("not exist");
-//                            }
-//                        } else{
-//                            ((TextView)CourseSpins.getSelectedView()).setError("not exist");
-//                        }
-                    } else{
-                        name.setError("not exist");
-                    }
-                } else{
-                    studentid.setError("not exist");
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
     }
 }
