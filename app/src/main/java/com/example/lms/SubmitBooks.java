@@ -1,6 +1,5 @@
 package com.example.lms;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -11,13 +10,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
 
 public class SubmitBooks extends AppCompatActivity {
 
@@ -25,9 +19,8 @@ public class SubmitBooks extends AppCompatActivity {
     Spinner CourseSpins, YearSpins;
     Button submit, clear;
     View v;
-    String key="";
-    long maxid=0;
-    DatabaseReference reference, reference1, reference2, reference3;
+    boolean flag= false;
+    DatabaseReference reference, reff;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,25 +60,19 @@ public class SubmitBooks extends AppCompatActivity {
                 YearSpins.setSelection(0);
             }
         });
-        reference= FirebaseDatabase.getInstance().getReference().child("IssuedBook");
-        reference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()) maxid= snapshot.getChildrenCount();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
+        reference= FirebaseDatabase.getInstance().getReference("IssuedBook");
+        String key= reference.push().getKey();
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(!validBID() | !validTitle() | !validAuthor() | !validCategory() | !validSID() | !validName() | !validCourse() | !validYear()){
 
                 }
-                else chkDetailsDB();
+                else if(!deleteDetailsDB()) {
+//                    chkDetailsDB();
+
+
+                }
             }
         });
     }
@@ -186,104 +173,111 @@ public class SubmitBooks extends AppCompatActivity {
         }
     }
 
-    private void chkDetailsDB() {
-
-        String isuBook= bookid.getText().toString();
-        String isuTitle=title.getText().toString();
-        String isuAuthor= author.getText().toString();
-        String isuCategory= category.getText().toString();
-        String isuStudentid= studentid.getText().toString();
-        String isuName= name.getText().toString();
-        String isuCourseSpin= CourseSpins.getSelectedItem().toString();
-        String isuYearSpin= YearSpins.getSelectedItem().toString();
-
-        reference= FirebaseDatabase.getInstance().getReference().child("IssuedBook").child(String.valueOf(maxid+1));
-        Query chkBookDB= reference.orderByChild("bookID").equalTo(isuBook);
-
-        chkBookDB.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()){
-                    bookid.setError(null);
-                    String bookDB= snapshot.child(isuBook).child("BookID").getValue(String.class);
-                    String titleDB= snapshot.child(isuBook).child("Title").getValue(String.class);
-                    String authorDB= snapshot.child(isuBook).child("Author").getValue(String.class);
-                    String categoryDB= snapshot.child(isuBook).child("Category").getValue(String.class);
-                    String studentDB= snapshot.child(isuStudentid).child("StudentID").getValue(String.class);
-                    String nameDB= snapshot.child(isuStudentid).child("Name").getValue(String.class);
-                    String courseDB= snapshot.child(isuStudentid).child("Course").getValue(String.class);
-                    String yearDB= snapshot.child(isuStudentid).child("Year").getValue(String.class);
-
-                    if (titleDB.equals(isuTitle)){
-                        bookid.setError(null);
-                        if (authorDB.equals(isuAuthor)){
-                            bookid.setError(null);
-                            if (categoryDB.equals(isuCategory)){
-                                bookid.setError(null);
-                                if (studentDB.equals(isuStudentid)){
-                                    bookid.setError(null);
-                                    if (nameDB.equals(isuName)){
-//                                        deleteDetailsDB();
-
-//                                        if (courseDB.equals(isuCourseSpin)){
-//                                            bookid.setError(null);
-//                                            if (yearDB.equals(isuYearSpin)){
-//                                                bookid.setError(null);
+//    private void chkDetailsDB() {
 //
-//                                            } else {
-//                                                ((TextView)YearSpins.getSelectedView()).setError("not exist");
-//                                            }
-//                                        } else {
-//                                            ((TextView)CourseSpins.getSelectedView()).setError("not exist");
-//                                        }
-                                    } else{
-                                        name.setError("not exist");
-                                    }
-                                } else{
-                                    studentid.setError("not exist");
-                                }
-                            } else{
-                                category.setError("not exist");
-                            }
-                        } else{
-                            author.setError("not exist");
-                        }
-                    } else{
-                        title.setError("not exist");
-                    }
-                } else{
-                    bookid.setError("not exist");
-                }
-            }
+//        String isuBook= bookid.getText().toString();
+//        String isuTitle=title.getText().toString();
+//        String isuAuthor= author.getText().toString();
+//        String isuCategory= category.getText().toString();
+//        String isuStudentid= studentid.getText().toString();
+//        String isuName= name.getText().toString();
+//        String isuCourseSpin= CourseSpins.getSelectedItem().toString();
+//        String isuYearSpin= YearSpins.getSelectedItem().toString();
+//
+//
+//
+//        reference= FirebaseDatabase.getInstance().getReference().child("IssuedBook");
+//        Query chkBookDB= reference.orderByChild("bookID").equalTo(isuBook);
+//
+//        chkBookDB.addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                if (snapshot.exists()){
+//                    bookid.setError(null);
+//                    String bookDB= snapshot.child(isuBook).child("BookID").getValue(String.class);
+//                    String titleDB= snapshot.child(isuBook).child("Title").getValue(String.class);
+//                    String authorDB= snapshot.child(isuBook).child("Author").getValue(String.class);
+//                    String categoryDB= snapshot.child(isuBook).child("Category").getValue(String.class);
+//                    String studentDB= snapshot.child(isuBook).child("StudentID").getValue(String.class);
+//                    String nameDB= snapshot.child(isuBook).child("Name").getValue(String.class);
+//                    String courseDB= snapshot.child(isuBook).child("Course").getValue(String.class);
+//                    String yearDB= snapshot.child(isuBook).child("Year").getValue(String.class);
+//
+//                    fragBookStu bookStu= new fragBookStu();
+//
+////                    if (titleDB.equals(isuTitle)){
+////                        bookid.setError(null);
+////                        if (authorDB.equals(isuAuthor)){
+////                            bookid.setError(null);
+//                            if (categoryDB.equals(isuCategory)){
+//                                bookid.setError(null);
+//                                if (studentDB.equals(isuStudentid)){
+//                                    bookid.setError(null);
+//                                    if (nameDB.equals(isuName)){
+////                                        deleteDetailsDB();
+//                                            flag= true;
+////                                        if (courseDB.equals(isuCourseSpin)){
+////                                            bookid.setError(null);
+////                                            if (yearDB.equals(isuYearSpin)){
+////                                                bookid.setError(null);
+////
+////                                            } else {
+////                                                ((TextView)YearSpins.getSelectedView()).setError("not exist");
+////                                            }
+////                                        } else {
+////                                            ((TextView)CourseSpins.getSelectedView()).setError("not exist");
+////                                        }
+//                                    } else{
+//                                        name.setError("not exist");
+//                                    }
+//                                } else{
+//                                    studentid.setError("not exist");
+//                                }
+//                            } else{
+//                                category.setError("not exist");
+//                            }
+//                        } else{
+//                            author.setError("not exist");
+//                        }
+////                    } else{
+////                        title.setError("not exist");
+////                    }
+////                } else{
+////                    bookid.setError("not exist");
+////                }
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//            }
+//        });
+//    }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-            }
-        });
-    }
-
-    private void deleteDetailsDB() {
+    private boolean deleteDetailsDB(String key) {
         String isuBook= bookid.getText().toString();
 
+//        reference.removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
+//            @Override
+//            public void onSuccess(Void unused) {
+////                bookid.setText("");
+////                title.setText("");
+////                author.setText("");
+////                category.setText("");
+////                studentid.setText("");
+////                name.setText("");
+////                CourseSpins.setSelection(0);
+////                YearSpins.setSelection(0);
+//                String key= reff.push().getKey();
+//
+//                reff.child(key).setValue(null);
+//                flag= false;
+//
+//            }
+//        });
 
+        reff= reference.child(key);
 
-
-        reference.removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void unused) {
-//                bookid.setText("");
-//                title.setText("");
-//                author.setText("");
-//                category.setText("");
-//                studentid.setText("");
-//                name.setText("");
-//                CourseSpins.setSelection(0);
-//                YearSpins.setSelection(0);
-                if (reference.child(String.valueOf(maxid+1)).child("bookID").equals(isuBook)){
-                    reference.child(String.valueOf(maxid+1)).setValue(null);
-                }
-
-            }
-        });
+        reff.removeValue();
+        return true;
     }
 }
