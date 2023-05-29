@@ -1,8 +1,10 @@
 package com.example.lms;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -10,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -18,6 +21,7 @@ public class SubmitBooks extends AppCompatActivity {
     EditText bookid, title, author, category, studentid,name;
     Spinner CourseSpins, YearSpins;
     Button submit, clear;
+    fragBookStu bookStu;
     View v;
     boolean flag= false;
     DatabaseReference reference, reff;
@@ -60,17 +64,17 @@ public class SubmitBooks extends AppCompatActivity {
                 YearSpins.setSelection(0);
             }
         });
-        reference= FirebaseDatabase.getInstance().getReference("IssuedBook");
-        String key= reference.push().getKey();
+
+
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(!validBID() | !validTitle() | !validAuthor() | !validCategory() | !validSID() | !validName() | !validCourse() | !validYear()){
 
                 }
-                else if(!deleteDetailsDB()) {
+                else  {
 //                    chkDetailsDB();
-
+                    deleteDetailsDB();
 
                 }
             }
@@ -253,31 +257,24 @@ public class SubmitBooks extends AppCompatActivity {
 //        });
 //    }
 
-    private boolean deleteDetailsDB(String key) {
+
+
+
+    private void deleteDetailsDB() {
+
         String isuBook= bookid.getText().toString();
+        String isuTitle=title.getText().toString();
+        String isuAuthor= author.getText().toString();
+        String isuCategory= category.getText().toString();
+        String isuStudentid= studentid.getText().toString();
+        String isuName= name.getText().toString();
+        String isuCourseSpin= CourseSpins.getSelectedItem().toString();
+        String isuYearSpin= YearSpins.getSelectedItem().toString();
+        reff= FirebaseDatabase.getInstance().getReference("IssuedBook");
+        String id= reff.getKey();
+        fragBookStu bookStu= new fragBookStu(isuBook, isuTitle, isuAuthor, isuCategory, isuStudentid, isuName, isuCourseSpin, isuYearSpin, id);
 
-//        reference.removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
-//            @Override
-//            public void onSuccess(Void unused) {
-////                bookid.setText("");
-////                title.setText("");
-////                author.setText("");
-////                category.setText("");
-////                studentid.setText("");
-////                name.setText("");
-////                CourseSpins.setSelection(0);
-////                YearSpins.setSelection(0);
-//                String key= reff.push().getKey();
-//
-//                reff.child(key).setValue(null);
-//                flag= false;
-//
-//            }
-//        });
+        reff.child(id).removeValue();
 
-        reff= reference.child(key);
-
-        reff.removeValue();
-        return true;
     }
 }

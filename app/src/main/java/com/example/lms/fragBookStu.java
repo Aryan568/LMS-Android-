@@ -1,10 +1,7 @@
 package com.example.lms;
 
 public class fragBookStu {
-    String BookID, Title, Author, Category, StudentID, Name, Course, Year;
-
-    public fragBookStu() {
-    }
+    String BookID, Title, Author, Category, StudentID, Name, Course, Year, key;
 
     public String getBookID() {
         return BookID;
@@ -68,5 +65,25 @@ public class fragBookStu {
 
     public void setYear(String year) {
         Year = year;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public fragBookStu(String bookID, String title, String author, String category, String studentID, String name, String course, String year, String key) {
+        BookID = bookID;
+        Title = title;
+        Author = author;
+        Category = category;
+        StudentID = studentID;
+        Name = name;
+        Course = course;
+        Year = year;
+        this.key = key;
     }
 }

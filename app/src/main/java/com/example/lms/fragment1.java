@@ -77,7 +77,7 @@ public class fragment1 extends Fragment {
             }
         });
 
-        reff= FirebaseDatabase.getInstance().getReference().child("IssuedBook");
+        reff= FirebaseDatabase.getInstance().getReference("IssuedBook");
 //        reff.addValueEventListener(new ValueEventListener() {
 //            @Override
 //            public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -203,8 +203,9 @@ public class fragment1 extends Fragment {
                         }
                     });
                 };
-                fragBookStu bookStu= new fragBookStu();
+
                 if (flag){
+
                     String isuBook= bookid.getText().toString();
                     String isuTitle=title.getText().toString();
                     String isuAuthor= author.getText().toString();
@@ -214,18 +215,22 @@ public class fragment1 extends Fragment {
                     String isuCourseSpin= CourseSpins.getSelectedItem().toString();
                     String isuYearSpin= YearSpins.getSelectedItem().toString();
 
-                    String key= reff.push().getKey();
-                    bookStu.setBookID(isuBook);
-                    bookStu.setTitle(isuTitle);
-                    bookStu.setAuthor(isuAuthor);
-                    bookStu.setCategory(isuCategory);
-                    bookStu.setStudentID(isuStudentid);
-                    bookStu.setName(isuName);
-                    bookStu.setCourse(isuCourseSpin);
-                    bookStu.setYear(isuYearSpin);
+                    String id= reff.push().getKey();
+
+                    fragBookStu bookStu= new fragBookStu(isuBook, isuTitle, isuAuthor, isuCategory, isuStudentid, isuName, isuCourseSpin, isuYearSpin, id);
+
+
+//                    bookStu.setBookID(isuBook);
+//                    bookStu.setTitle(isuTitle);
+//                    bookStu.setAuthor(isuAuthor);
+//                    bookStu.setCategory(isuCategory);
+//                    bookStu.setStudentID(isuStudentid);
+//                    bookStu.setName(isuName);
+//                    bookStu.setCourse(isuCourseSpin);
+//                    bookStu.setYear(isuYearSpin);
 
 //                    reff.child(String.valueOf(maxid+1)).setValue(bookStu);
-                    reff.child(key).setValue(bookStu);
+                    reff.child(id).setValue(bookStu);
                     flag=false;
                 }
             }
