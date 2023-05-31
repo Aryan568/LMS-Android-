@@ -114,5 +114,19 @@
             </LinearLayout>
 
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="right">
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="delete"/>
+
+        </LinearLayout>
 
 </androidx.cardview.widget.CardView>
