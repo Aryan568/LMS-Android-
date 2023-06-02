@@ -1,5 +1,6 @@
 package com.example.lms;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,22 +17,17 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class RVAdapter extends FirebaseRecyclerAdapter<rvModel, RVAdapter.myViewHolder> {
 
-    /**
-     * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
-     * {@link FirebaseRecyclerOptions} for configuration options.
-     *
-     * @param options
-     */
     public RVAdapter(@NonNull FirebaseRecyclerOptions<rvModel> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull myViewHolder holder, final int position, @NonNull rvModel model) {
+    protected void onBindViewHolder(@NonNull myViewHolder holder, @SuppressLint("RecyclerView") final int position, @NonNull rvModel model) {
         holder.BookID.setText(model.getBookID());
         holder.Title.setText(model.getTitle());
         holder.StudentID.setText(model.getStudentID());
         holder.Name.setText(model.getName());
+
 
         holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +38,7 @@ public class RVAdapter extends FirebaseRecyclerAdapter<rvModel, RVAdapter.myView
 
                     }
                 });
+                notifyDataSetChanged();
             }
         });
     }
@@ -67,6 +64,5 @@ public class RVAdapter extends FirebaseRecyclerAdapter<rvModel, RVAdapter.myView
             delete= itemView.findViewById(R.id.btnDelete);
         }
     }
-
 }
 
