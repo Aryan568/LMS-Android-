@@ -22,8 +22,20 @@
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="150dp"
                 android:src="@drawable/ic_launcher_background"/>
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:id="@+id/signup_username"
+                android:layout_marginTop="30dp"
+                android:padding="8dp"
+                android:hint="Username"
+                android:drawableLeft="@drawable/baseline_people_24"
+                android:drawablePadding="8dp"
+                android:background="@drawable/edittext_bkg"/>
 
             <EditText
                 android:layout_width="300dp"
@@ -54,12 +66,12 @@
                 android:layout_width="300dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
-                android:id="@+id/signup_confirm"
+                android:id="@+id/signup_phone"
                 android:layout_marginTop="20dp"
                 android:padding="8dp"
-                android:hint="Confirm Password"
-                android:inputType="textPassword"
-                android:drawableLeft="@drawable/baseline_password_24"
+                android:hint="Phone Number"
+                android:inputType="number"
+                android:drawableLeft="@drawable/baseline_phone_24"
                 android:drawablePadding="8dp"
                 android:background="@drawable/edittext_bkg"/>
 

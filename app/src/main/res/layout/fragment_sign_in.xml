@@ -32,8 +32,8 @@
                 android:id="@+id/login_email"
                 android:layout_marginTop="30dp"
                 android:padding="8dp"
-                android:hint="Email"
-                android:drawableLeft="@drawable/baseline_email_24"
+                android:hint="Username"
+                android:drawableLeft="@drawable/baseline_people_24"
                 android:drawablePadding="8dp"
                 android:background="@drawable/edittext_bkg"/>
 
