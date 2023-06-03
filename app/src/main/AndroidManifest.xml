@@ -40,11 +40,6 @@
             android:label="Submit Books"
             android:parentActivityName=".Dashboard" />
         <activity
-            android:name=".IssueBooks"
-            android:exported="false"
-            android:label="Issue Books"
-            android:parentActivityName=".Dashboard" />
-        <activity
             android:name=".ManageBooks"
             android:exported="false"
             android:label="Manage Books"

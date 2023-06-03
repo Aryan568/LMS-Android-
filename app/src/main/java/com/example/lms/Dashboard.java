@@ -12,7 +12,6 @@ import android.widget.ImageButton;
 public class Dashboard extends AppCompatActivity {
     ImageButton books, issue, student;
 
-    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
