@@ -8,18 +8,22 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity2 extends AppCompatActivity {
-    Button btn;
+    Button SignuP, SigniN;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        btn= findViewById(R.id.btn_toSignup);
+        SignuP= (Button)findViewById(R.id.Signupss);
+        SigniN= (Button)findViewById(R.id.Signinss);
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        SignuP.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity2.this, logup.class));
-            }
+            public void onClick(View view) {startActivity(new Intent(MainActivity2.this, SignUp.class));}
+        });
+
+        SigniN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {startActivity(new Intent(MainActivity2.this, SignIn.class));}
         });
 
     }
