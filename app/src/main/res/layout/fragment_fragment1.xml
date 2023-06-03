@@ -40,7 +40,6 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.051"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="@id/textView6"
                         app:layout_constraintVertical_bias="0.161" />
 
                     <EditText
@@ -72,7 +71,6 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.051"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="@id/textView7"
                         app:layout_constraintVertical_bias="0.255" />
 
                     <EditText
@@ -104,7 +102,6 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.051"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="@id/textView8"
                         app:layout_constraintVertical_bias="0.353" />
 
                     <EditText
@@ -132,11 +129,9 @@
                         android:layout_marginTop="8dp"
                         android:text="Category"
                         android:textSize="20dp"
-                        app:layout_constraintBottom_toBottomOf="@id/textView7"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.051"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="@id/textView9"
                         app:layout_constraintVertical_bias="0.456" />
 
                     <EditText
@@ -174,7 +169,6 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.051"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@id/textView6"
                             app:layout_constraintVertical_bias="0.161" />
 
                         <EditText
@@ -202,7 +196,6 @@
                             android:layout_marginTop="65dp"
                             android:text="Name"
                             android:textSize="20dp"
-                            app:layout_constraintBottom_toBottomOf="@id/textView8"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.051"
                             app:layout_constraintStart_toStartOf="parent"
@@ -238,7 +231,6 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.051"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@id/textView9"
                             app:layout_constraintVertical_bias="0.456" />
 
                         <Spinner
@@ -262,7 +254,6 @@
                             android:layout_marginTop="150dp"
                             android:text="Year"
                             android:textSize="20dp"
-                            app:layout_constraintBottom_toBottomOf="@id/textView8"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.051"
                             app:layout_constraintStart_toStartOf="parent"

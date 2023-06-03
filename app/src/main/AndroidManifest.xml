@@ -35,11 +35,6 @@
             android:label="Students"
             android:parentActivityName=".Dashboard" />
         <activity
-            android:name=".SubmitBooks"
-            android:exported="false"
-            android:label="Submit Books"
-            android:parentActivityName=".Dashboard" />
-        <activity
             android:name=".ManageBooks"
             android:exported="false"
             android:label="Manage Books"
@@ -49,16 +44,6 @@
             android:exported="false"
             android:label="Dashboard"
             android:parentActivityName=".SignIn" />
-        <activity
-            android:name=".login"
-            android:exported="false"
-            android:label="SignIn"
-            android:parentActivityName=".logup" />
-        <activity
-            android:name=".logup"
-            android:exported="false"
-            android:label="SignUp"
-            android:parentActivityName=".MainActivity2" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
