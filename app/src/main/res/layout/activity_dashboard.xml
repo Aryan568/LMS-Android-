@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="367dp"
+            android:layout_width="match_parent"
             android:layout_height="591dp"
             android:padding="30dp"
             android:paddingTop="20dp"
@@ -49,8 +49,8 @@
                         app:layout_constraintStart_toEndOf="@+id/cardView2"
                         app:layout_constraintTop_toTopOf="parent">
 
-                        <ImageView
-                            android:id="@+id/imageView10"
+                        <ImageButton
+                            android:id="@+id/btn_manageBooks"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:srcCompat="@drawable/mb1" />
@@ -69,10 +69,10 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/cardView2"
-                        app:layout_constraintTop_toBottomOf="@+id/cardView3" >
+                        app:layout_constraintTop_toBottomOf="@+id/cardView3">
 
-                        <ImageView
-                            android:id="@+id/imageView8"
+                        <ImageButton
+                            android:id="@+id/btn_addStudent"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:srcCompat="@drawable/mss1" />
@@ -94,8 +94,8 @@
                         app:layout_constraintTop_toTopOf="parent"
                         tools:ignore="NotSibling,UnknownIdInLayout">
 
-                        <ImageView
-                            android:id="@+id/imageView9"
+                        <ImageButton
+                            android:id="@+id/btn_issueBooks"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:srcCompat="@drawable/is1" />

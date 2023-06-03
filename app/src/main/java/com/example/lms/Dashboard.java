@@ -10,15 +10,15 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 public class Dashboard extends AppCompatActivity {
-    ImageButton books, issue, submit, student;
+    ImageButton books, issue, student;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
         books= findViewById(R.id.btn_manageBooks);
         issue= findViewById(R.id.btn_issueBooks);
-        submit= findViewById(R.id.btn_submitBook);
         student= findViewById(R.id.btn_addStudent);
 
         books.setOnClickListener(new View.OnClickListener() {
@@ -31,12 +31,6 @@ public class Dashboard extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Dashboard.this, IssueBook.class));
-            }
-        });
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Dashboard.this, SubmitBooks.class));
             }
         });
         student.setOnClickListener(new View.OnClickListener() {
