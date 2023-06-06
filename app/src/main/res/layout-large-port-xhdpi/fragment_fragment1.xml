@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/frr"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="700dp"
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginTop="60dp"
+                app:cardElevation="160dp"
+                android:backgroundTint="@color/purple_200"
+                app:cardCornerRadius="50dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="0dp">
+
+                    <EditText
+                        android:id="@+id/etBookID"
+                        android:layout_width="300dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/edittext_bkg"
+                        android:ems="10"
+                        android:layout_gravity="center"
+                        android:hint="   b o o k  I D"
+                        android:inputType="number"
+                        android:textStyle="bold|italic" />
+
+                    <EditText
+                        android:id="@+id/etTitle"
+                        android:layout_width="300dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/edittext_bkg"
+                        android:ems="10"
+                        android:hint="   t i t l e"
+                        android:inputType="textPersonName"
+                        android:textStyle="bold|italic" />
+
+                    <EditText
+                        android:id="@+id/etAuthor"
+                        android:layout_width="300dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/edittext_bkg"
+                        android:ems="10"
+                        android:hint="   a u t h o r"
+                        android:inputType="textPersonName"
+                        android:textStyle="bold|italic" />
+
+                    <EditText
+                        android:id="@+id/etCategory"
+                        android:layout_width="300dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/edittext_bkg"
+                        android:ems="10"
+                        android:hint="   c a t e g o r y"
+                        android:inputType="textPersonName"
+                        android:textStyle="bold|italic" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:layout_marginTop="70dp"
+                        app:cardCornerRadius="30dp">
+
+                        <EditText
+                            android:id="@+id/etStudentID"
+                            android:layout_width="300dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="-120dp"
+                            android:background="@drawable/edittext_bkg"
+                            android:ems="10"
+                            android:hint="   s t u d e n t  I D"
+                            android:inputType="number"
+                            android:textStyle="bold|italic" />
+
+                        <EditText
+                            android:id="@+id/etName"
+                            android:layout_width="300dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="-70dp"
+                            android:background="@drawable/edittext_bkg"
+                            android:ems="10"
+                            android:hint="   n a m e"
+                            android:inputType="textPersonName"
+                            android:textStyle="bold|italic" />
+
+                        <Spinner
+                            android:id="@+id/CourseSpin"
+                            android:layout_width="300dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="-20dp"
+                            android:background="@drawable/edittext_bkg" />
+
+                        <Spinner
+                            android:id="@+id/YearSpin"
+                            android:layout_width="300dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="30dp"
+                            android:background="@drawable/edittext_bkg" />
+
+                        <Button
+                            android:id="@+id/btnIssue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginBottom="20dp"
+                            android:text="Issue" />
+
+                        <Button
+                            android:id="@+id/btnClear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="220dp"
+                            android:layout_marginBottom="20dp"
+                            android:text="Clear" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>
