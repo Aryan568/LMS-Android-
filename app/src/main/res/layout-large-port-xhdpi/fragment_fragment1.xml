@@ -21,7 +21,7 @@
                 android:layout_marginHorizontal="100dp"
                 android:layout_marginTop="60dp"
                 app:cardElevation="160dp"
-                android:backgroundTint="@color/purple_200"
+                android:backgroundTint="@color/brown_300"
                 app:cardCornerRadius="50dp">
 
                 <LinearLayout
@@ -83,6 +83,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="350dp"
                         android:layout_marginTop="50dp"
+                        android:backgroundTint="@color/cream_300"
                         app:cardCornerRadius="30dp">
 
                         <EditText
