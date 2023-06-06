@@ -18,7 +18,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="700dp"
-                android:layout_marginHorizontal="60dp"
+                android:layout_marginHorizontal="100dp"
                 android:layout_marginTop="60dp"
                 app:cardElevation="160dp"
                 android:backgroundTint="@color/purple_200"
@@ -48,7 +48,7 @@
                         android:layout_width="300dp"
                         android:layout_height="45dp"
                         android:layout_gravity="center"
-                        android:layout_marginTop="0dp"
+                        android:layout_marginTop="5dp"
                         android:background="@drawable/edittext_bkg"
                         android:ems="10"
                         android:hint="   t i t l e"
@@ -60,7 +60,7 @@
                         android:layout_width="300dp"
                         android:layout_height="45dp"
                         android:layout_gravity="center"
-                        android:layout_marginTop="0dp"
+                        android:layout_marginTop="5dp"
                         android:background="@drawable/edittext_bkg"
                         android:ems="10"
                         android:hint="   a u t h o r"
@@ -72,7 +72,7 @@
                         android:layout_width="300dp"
                         android:layout_height="45dp"
                         android:layout_gravity="center"
-                        android:layout_marginTop="0dp"
+                        android:layout_marginTop="5dp"
                         android:background="@drawable/edittext_bkg"
                         android:ems="10"
                         android:hint="   c a t e g o r y"
@@ -82,7 +82,7 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="350dp"
-                        android:layout_marginTop="70dp"
+                        android:layout_marginTop="50dp"
                         app:cardCornerRadius="30dp">
 
                         <EditText
@@ -102,7 +102,7 @@
                             android:layout_width="300dp"
                             android:layout_height="45dp"
                             android:layout_gravity="center"
-                            android:layout_marginTop="-70dp"
+                            android:layout_marginTop="-65dp"
                             android:background="@drawable/edittext_bkg"
                             android:ems="10"
                             android:hint="   n a m e"
@@ -114,7 +114,7 @@
                             android:layout_width="300dp"
                             android:layout_height="45dp"
                             android:layout_gravity="center"
-                            android:layout_marginTop="-20dp"
+                            android:layout_marginTop="-15dp"
                             android:background="@drawable/edittext_bkg" />
 
                         <Spinner
@@ -122,7 +122,7 @@
                             android:layout_width="300dp"
                             android:layout_height="45dp"
                             android:layout_gravity="center"
-                            android:layout_marginTop="30dp"
+                            android:layout_marginTop="35dp"
                             android:background="@drawable/edittext_bkg" />
 
                         <Button
@@ -130,9 +130,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:layout_marginLeft="60dp"
-                            android:layout_marginBottom="20dp"
-                            android:text="Issue" />
+                            android:layout_marginLeft="90dp"
+                            android:layout_marginBottom="30dp"
+                            android:text="Issue"
+                            app:cornerRadius="30dp" />
 
                         <Button
                             android:id="@+id/btnClear"
@@ -140,8 +141,9 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
                             android:layout_marginLeft="220dp"
-                            android:layout_marginBottom="20dp"
-                            android:text="Clear" />
+                            android:layout_marginBottom="30dp"
+                            android:text="Clear"
+                            app:cornerRadius="30dp" />
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
