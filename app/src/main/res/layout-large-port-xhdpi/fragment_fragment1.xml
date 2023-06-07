@@ -3,9 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/frr"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment1">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/frr"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,12 +22,12 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="700dp"
+                android:layout_height="680dp"
                 android:layout_marginHorizontal="100dp"
-                android:layout_marginTop="60dp"
-                app:cardElevation="160dp"
+                android:layout_marginTop="90dp"
                 android:backgroundTint="@color/brown_300"
-                app:cardCornerRadius="50dp">
+                app:cardCornerRadius="50dp"
+                app:cardElevation="160dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -35,10 +40,10 @@
                         android:id="@+id/etBookID"
                         android:layout_width="300dp"
                         android:layout_height="45dp"
+                        android:layout_gravity="center"
                         android:layout_marginTop="40dp"
                         android:background="@drawable/edittext_bkg"
                         android:ems="10"
-                        android:layout_gravity="center"
                         android:hint="   b o o k  I D"
                         android:inputType="number"
                         android:textStyle="bold|italic" />
