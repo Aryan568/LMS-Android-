@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ManageBooks">
-
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="570dp"
@@ -16,11 +15,12 @@
         android:backgroundTint="@color/brown_300"
         app:cardCornerRadius="50dp">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="220dp"
-            android:layout_height="120dp"
-            app:cardCornerRadius="30dp"
-            android:layout_marginLeft="90dp">
+    <androidx.cardview.widget.CardView
+        android:layout_width="220dp"
+        android:layout_height="120dp"
+        app:cardCornerRadius="30dp"
+        android:layout_marginLeft="90dp">
+
 
             <TextView
                 android:layout_width="match_parent"
