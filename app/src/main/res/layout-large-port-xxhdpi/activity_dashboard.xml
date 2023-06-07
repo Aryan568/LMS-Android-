@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="1000dp"
+    tools:context=".Dashboard">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="391dp"
+            android:layout_marginTop="100dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="272dp"
+                android:layout_height="390dp"
+                android:layout_marginRight="20dp">
+
+                <ImageButton
+                    android:id="@+id/btn_manageBooks"
+                    android:layout_width="265dp"
+                    android:layout_height="338dp"
+                    android:background="@color/white"
+                    android:contentDescription="TODO"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:srcCompat="@drawable/bkssssss" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="280dp"
+                    android:gravity="center"
+                    android:text="Manage Books"
+                    android:textSize="30dp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="305dp"
+                android:layout_height="391dp">
+
+                <ImageButton
+                    android:id="@+id/btn_addStudent"
+                    android:layout_width="267dp"
+                    android:layout_height="319dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@color/white"
+                    android:contentDescription="TODO"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.113"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:srcCompat="@drawable/st" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="280dp"
+                    android:gravity="center"
+                    android:text="Manage Students"
+                    android:textSize="30dp" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+
+        <FrameLayout
+            android:layout_width="500dp"
+            android:layout_height="400dp">
+
+            <ImageButton
+                android:id="@+id/btn_issueBooks"
+                android:layout_width="418dp"
+                android:layout_height="345dp"
+                android:layout_marginStart="120dp"
+                android:layout_marginEnd="3dp"
+                android:background="@color/white"
+                android:contentDescription="TODO"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.113"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/issb" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="290dp"
+                android:layout_marginLeft="80dp"
+                android:gravity="center"
+                android:text="Issue &amp; Submit Books"
+                android:textSize="30dp" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
