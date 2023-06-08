@@ -10,7 +10,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="570dp"
-        android:layout_marginHorizontal="100dp"
+        android:layout_marginHorizontal="80dp"
         android:layout_marginTop="90dp"
         app:cardElevation="100dp"
         android:backgroundTint="@color/brown_300"
@@ -20,7 +20,7 @@
         android:layout_width="220dp"
         android:layout_height="120dp"
         app:cardCornerRadius="30dp"
-        android:layout_marginLeft="90dp">
+        android:layout_marginLeft="50dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -35,7 +35,7 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/stID"
-        android:layout_width="300dp"
+        android:layout_width="240dp"
         android:layout_height="45dp"
         android:background="@drawable/edittext_bkg"
         android:ems="10"
@@ -47,7 +47,7 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/fName"
-        android:layout_width="300dp"
+        android:layout_width="240dp"
         android:layout_height="45dp"
         android:background="@drawable/edittext_bkg"
         android:ems="10"
@@ -59,7 +59,7 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/lName"
-        android:layout_width="300dp"
+        android:layout_width="240dp"
         android:layout_height="45dp"
         android:background="@drawable/edittext_bkg"
         android:ems="10"
@@ -71,7 +71,7 @@
 
         <Spinner
             android:id="@+id/CourseSpin"
-            android:layout_width="300dp"
+            android:layout_width="240dp"
             android:layout_height="45dp"
             android:layout_marginTop="90dp"
             android:layout_gravity="center"
@@ -79,9 +79,9 @@
 
         <Spinner
             android:id="@+id/YearSpin"
-            android:layout_width="300dp"
+            android:layout_width="240dp"
             android:layout_height="45dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="160dp"
             android:layout_gravity="center"
             android:background="@drawable/edittext_bkg" />
 
@@ -91,8 +91,8 @@
         android:layout_height="wrap_content"
         android:text="Save"
         app:cornerRadius = "30dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="510dp"/>
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="520dp"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/b7"
@@ -101,8 +101,8 @@
         android:onClick="updateOnClick"
         android:text="Update"
         app:cornerRadius = "30dp"
-        android:layout_marginTop="510dp"
-        android:layout_marginLeft="230dp"/>
+        android:layout_marginTop="520dp"
+        android:layout_marginLeft="180dp"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/b8"
@@ -111,8 +111,8 @@
         android:text="Delete"
         app:cornerRadius = "30dp"
         android:layout_marginTop="570dp"
-        android:layout_marginBottom="30dp"
-        android:layout_marginLeft="80dp"/>
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="70dp"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/b9"
@@ -121,7 +121,7 @@
         android:text="Clear"
         app:cornerRadius = "30dp"
         android:layout_marginTop="570dp"
-        android:layout_marginLeft="230dp" />
+        android:layout_marginLeft="180dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/b10"
@@ -129,8 +129,8 @@
         android:layout_height="47dp"
         android:text="S"
         app:cornerRadius = "30dp"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="180dp"/>
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="170dp"/>
 
     </androidx.cardview.widget.CardView>
 </ScrollView>
