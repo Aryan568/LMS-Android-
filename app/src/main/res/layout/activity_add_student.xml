@@ -1,147 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/frr"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddStudent">
 
-    <Spinner
-        android:id="@+id/CourseSpin"
-        android:layout_width="300dp"
-        android:layout_height="45dp"
-        android:background="@drawable/edittext_bkg"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.311"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.483" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="570dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="90dp"
+        app:cardElevation="100dp"
+        android:backgroundTint="@color/brown_300"
+        app:cardCornerRadius="50dp">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/stID"
-        android:layout_width="300dp"
-        android:layout_height="45dp"
-        android:background="@drawable/edittext_bkg"
-        android:ems="10"
-        android:hint="   s t u d e n t  I D"
-        android:inputType="number"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.311"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.158" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="220dp"
+            android:layout_height="120dp"
+            app:cardCornerRadius="30dp"
+            android:layout_marginLeft="40dp">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/fName"
-        android:layout_width="300dp"
-        android:layout_height="45dp"
-        android:background="@drawable/edittext_bkg"
-        android:ems="10"
-        android:hint="   f i r s t  n a m e"
-        android:inputType="textPersonName"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.311"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.269" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:text="Manage Students"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:textStyle="bold"/>
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/lName"
-        android:layout_width="300dp"
-        android:layout_height="45dp"
-        android:background="@drawable/edittext_bkg"
-        android:ems="10"
-        android:hint="   l a s t  n a m e"
-        android:inputType="textPersonName"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.311"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.367" />
+        </androidx.cardview.widget.CardView>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/b6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Save"
-        app:cornerRadius = "30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.764" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/stID"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:background="@drawable/edittext_bkg"
+            android:ems="10"
+            android:hint="   s t u d e n t  I D"
+            android:inputType="number"
+            android:textStyle="bold|italic"
+            android:layout_marginTop="-120dp"
+            android:layout_gravity="center"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/b7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="updateOnClick"
-        android:text="Update"
-        app:cornerRadius = "30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.691"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.78" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fName"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:background="@drawable/edittext_bkg"
+            android:ems="10"
+            android:hint="   f i r s t  n a m e"
+            android:inputType="textPersonName"
+            android:textStyle="bold|italic"
+            android:layout_marginTop="-50dp"
+            android:layout_gravity="center"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/b8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Delete"
-        app:cornerRadius = "30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.203"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.942" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/lName"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:background="@drawable/edittext_bkg"
+            android:ems="10"
+            android:hint="   l a s t  n a m e"
+            android:inputType="textPersonName"
+            android:textStyle="bold|italic"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/b9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Clear"
-        app:cornerRadius = "30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.695"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.931" />
+        <Spinner
+            android:id="@+id/CourseSpin"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="90dp"
+            android:layout_gravity="center"
+            android:background="@drawable/edittext_bkg"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/b10"
-        android:layout_width="45dp"
-        android:layout_height="47dp"
-        android:text="S"
-        app:cornerRadius = "30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.175" />
+        <Spinner
+            android:id="@+id/YearSpin"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="150dp"
+            android:layout_gravity="center"
+            android:background="@drawable/edittext_bkg" />
 
-    <Spinner
-        android:id="@+id/YearSpin"
-        android:layout_width="300dp"
-        android:layout_height="45dp"
-        android:background="@drawable/edittext_bkg"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.311"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.588" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/b6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            app:cornerRadius = "30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="510dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/b7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="updateOnClick"
+            android:text="Update"
+            app:cornerRadius = "30dp"
+            android:layout_marginTop="510dp"
+            android:layout_marginLeft="160dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/b8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            app:cornerRadius = "30dp"
+            android:layout_marginTop="570dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="40dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/b9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            app:cornerRadius = "30dp"
+            android:layout_marginTop="570dp"
+            android:layout_marginLeft="160dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/b10"
+            android:layout_width="45dp"
+            android:layout_height="47dp"
+            android:text="S"
+            app:cornerRadius = "30dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="180dp"/>
+
+    </androidx.cardview.widget.CardView>
+</ScrollView>

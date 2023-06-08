@@ -3,107 +3,106 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="1000dp"
     tools:context=".Dashboard">
 
-
-
-    <androidx.cardview.widget.CardView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="591dp"
-            android:padding="30dp"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp">
+            android:layout_height="296dp"
+            android:layout_marginTop="100dp"
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="181dp"
+                android:layout_height="249dp"
+                android:layout_marginRight="20dp">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <ImageButton
+                    android:id="@+id/btn_manageBooks"
+                    android:layout_width="175dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white"
+                    android:contentDescription="TODO"
+                    app:srcCompat="@drawable/bkssr" />
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cardView3"
-                        android:layout_width="123dp"
-                        android:layout_height="245dp"
-                        android:layout_marginStart="4dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginEnd="20dp"
-                        android:layout_marginBottom="2dp"
-                        app:cardCornerRadius="30dp"
-                        app:cardElevation="30dp"
-                        app:layout_constraintBottom_toTopOf="@+id/cardView4"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/cardView2"
-                        app:layout_constraintTop_toTopOf="parent">
+                <TextView
+                    android:layout_width="177dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="190dp"
+                    android:gravity="center"
+                    android:text="Manage Books"
+                    android:textSize="25dp" />
 
-                        <ImageButton
-                            android:id="@+id/btn_manageBooks"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/mb1" />
-                    </androidx.cardview.widget.CardView>
+            </FrameLayout>
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cardView4"
-                        android:layout_width="123dp"
-                        android:layout_height="245dp"
-                        android:layout_marginStart="4dp"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginEnd="20dp"
-                        android:layout_marginBottom="22dp"
-                        app:cardCornerRadius="30dp"
-                        app:cardElevation="30dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/cardView2"
-                        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+            <FrameLayout
+                android:layout_width="194dp"
+                android:layout_height="260dp">
 
-                        <ImageButton
-                            android:id="@+id/btn_addStudent"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/mss1" />
-                    </androidx.cardview.widget.CardView>
+                <ImageButton
+                    android:id="@+id/btn_addStudent"
+                    android:layout_width="189dp"
+                    android:layout_height="245dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@color/white"
+                    android:contentDescription="TODO"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.113"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:srcCompat="@drawable/str" />
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cardView2"
-                        android:layout_width="123dp"
-                        android:layout_height="245dp"
-                        android:layout_marginStart="37dp"
-                        android:layout_marginTop="100dp"
-                        android:layout_marginBottom="100dp"
-                        app:cardCornerRadius="30dp"
-                        app:cardElevation="30dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/btn_addStudent"
-                        app:layout_constraintHorizontal_bias="1.0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="NotSibling,UnknownIdInLayout">
+                <TextView
+                    android:layout_width="187dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="190dp"
+                    android:gravity="center"
+                    android:text="Manage Students"
+                    android:textSize="25dp" />
 
-                        <ImageButton
-                            android:id="@+id/btn_issueBooks"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/is1" />
-                    </androidx.cardview.widget.CardView>
+            </FrameLayout>
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </LinearLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="430dp">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="380dp">
+
+                <ImageButton
+                    android:id="@+id/btn_issueBooks"
+                    android:layout_width="319dp"
+                    android:layout_height="277dp"
+                    android:layout_marginStart="50dp"
+                    android:background="@color/white"
+                    android:contentDescription="TODO"
+                    app:srcCompat="@drawable/issbr" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="230dp"
+                    android:gravity="center"
+                    android:text="Issue &amp; Submit Books"
+                    android:textSize="25dp" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </ScrollView>
