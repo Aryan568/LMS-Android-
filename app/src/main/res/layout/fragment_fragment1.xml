@@ -6,13 +6,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment1">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/frr"/>
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:background="@drawable/frr"/>-->
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
@@ -23,8 +24,9 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="650dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginHorizontal="50dp"
-                android:layout_marginTop="90dp"
+
                 android:backgroundTint="@color/brown_300"
                 app:cardCornerRadius="50dp"
                 app:cardElevation="160dp">

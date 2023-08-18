@@ -12,5 +12,11 @@
     <color name="purple_300">#8C52FF</color>
     <color name="brown_300">#9A633D</color>
     <color name="cream_300">#EDBB99</color>
+    <color name="teal_600">#FF019786</color>
+
+
+    <color name="colorPrimary">#128C7E</color>
+    <color name="colorPrimaryDark">#075E54</color>
+    <color name="ascent">#25D366</color>
 
 </resources>
