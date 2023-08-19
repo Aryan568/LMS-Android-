@@ -41,9 +41,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/stID"
             android:layout_width="250dp"
-            android:layout_height="45dp"
+            android:layout_height="55dp"
             android:layout_gravity="center"
-            android:layout_marginTop="-120dp"
+            android:layout_marginTop="-140dp"
             android:background="@drawable/edittext_bkg"
             android:ems="10"
             android:hint="   s t u d e n t  I D"
@@ -53,9 +53,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/fName"
             android:layout_width="250dp"
-            android:layout_height="45dp"
+            android:layout_height="55dp"
             android:layout_gravity="center"
-            android:layout_marginTop="-50dp"
+            android:layout_marginTop="-65dp"
             android:background="@drawable/edittext_bkg"
             android:ems="10"
             android:hint="   f i r s t  n a m e"
@@ -65,9 +65,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/lName"
             android:layout_width="250dp"
-            android:layout_height="45dp"
+            android:layout_height="55dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="7dp"
             android:background="@drawable/edittext_bkg"
             android:ems="10"
             android:hint="   l a s t  n a m e"
@@ -77,17 +77,17 @@
         <Spinner
             android:id="@+id/CourseSpin"
             android:layout_width="250dp"
-            android:layout_height="45dp"
+            android:layout_height="55dp"
             android:layout_gravity="center"
-            android:layout_marginTop="90dp"
+            android:layout_marginTop="79dp"
             android:background="@drawable/edittext_bkg" />
 
         <Spinner
             android:id="@+id/YearSpin"
             android:layout_width="250dp"
-            android:layout_height="45dp"
+            android:layout_height="55dp"
             android:layout_gravity="center"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="152dp"
             android:background="@drawable/edittext_bkg" />
 
         <com.google.android.material.button.MaterialButton
@@ -95,7 +95,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="510dp"
+            android:layout_marginTop="550dp"
             android:backgroundTint="@color/teal_200"
             android:text="Save"
             app:cornerRadius="30dp" />
@@ -104,8 +104,8 @@
             android:id="@+id/b7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="180dp"
-            android:layout_marginTop="510dp"
+            android:layout_marginLeft="205dp"
+            android:layout_marginTop="550dp"
             android:backgroundTint="@color/teal_200"
             android:onClick="updateOnClick"
             android:text="Update"
@@ -126,7 +126,7 @@
             android:id="@+id/b9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="180dp"
+            android:layout_marginLeft="205dp"
             android:layout_marginTop="620dp"
             android:backgroundTint="@color/teal_200"
             android:text="Clear"
@@ -134,10 +134,10 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/b10"
-            android:layout_width="45dp"
-            android:layout_height="47dp"
-            android:layout_marginLeft="252dp"
-            android:layout_marginTop="206dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="247dp"
+            android:layout_marginTop="185dp"
             android:backgroundTint="@color/teal_700"
             android:text="S"
             app:cornerRadius="30dp" />
