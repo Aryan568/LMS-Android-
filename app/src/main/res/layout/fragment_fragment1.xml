@@ -1,181 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C5EAE6"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment1">
 
-<!--    <ImageView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="30dp"-->
-<!--        android:background="@drawable/frr"/>-->
+    <!--    <ImageView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="30dp"-->
+    <!--        android:background="@drawable/frr"/>-->
 
-    <ScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="700dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="22dp"
+        android:backgroundTint="@color/teal_600"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="220dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="15dp"
+            app:cardCornerRadius="30dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:text="Issue Books"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <EditText
+                android:id="@+id/etBookID"
+                android:layout_width="240dp"
+                android:layout_height="45dp"
+                android:includeFontPadding="true"
+                android:paddingStart="18dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/edittext_bkg"
+                android:ems="10"
+                android:hint="   b o o k  I D"
+                android:inputType="number"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etTitle"
+                android:layout_width="240dp"
+                android:layout_height="45dp"
+                android:includeFontPadding="true"
+                android:paddingStart="18dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_bkg"
+                android:ems="10"
+                android:hint="   t i t l e"
+                android:inputType="textPersonName"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etAuthor"
+                android:layout_width="240dp"
+                android:layout_height="45dp"
+                android:includeFontPadding="true"
+                android:paddingStart="18dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_bkg"
+                android:ems="10"
+                android:hint="   a u t h o r"
+                android:inputType="textPersonName"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etCategory"
+                android:layout_width="240dp"
+                android:layout_height="45dp"
+                android:includeFontPadding="true"
+                android:paddingStart="18dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_bkg"
+                android:ems="10"
+                android:hint="   c a t e g o r y"
+                android:inputType="textPersonName"
+                android:textStyle="bold" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="650dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginHorizontal="50dp"
+                android:layout_height="310dp"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="#3D8794"
+                app:cardCornerRadius="30dp">
 
-                android:backgroundTint="@color/brown_300"
-                app:cardCornerRadius="50dp"
-                app:cardElevation="160dp">
+                <EditText
+                    android:id="@+id/etStudentID"
+                    android:layout_width="240dp"
+                    android:layout_height="45dp"
+                    android:includeFontPadding="true"
+                    android:paddingStart="18dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-100dp"
+                    android:background="@drawable/edittext_bkg"
+                    android:ems="10"
+                    android:hint="   s t u d e n t  I D"
+                    android:inputType="number"
+                    android:textStyle="bold" />
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="220dp"
-                    android:layout_height="80dp"
-                    app:cardCornerRadius="30dp"
-                    android:layout_marginLeft="40dp">
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="240dp"
+                    android:layout_height="45dp"
+                    android:includeFontPadding="true"
+                    android:paddingStart="18dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-50dp"
+                    android:background="@drawable/edittext_bkg"
+                    android:ems="10"
+                    android:hint="   n a m e"
+                    android:inputType="textPersonName"
+                    android:textStyle="bold" />
 
+                <Spinner
+                    android:id="@+id/CourseSpin"
+                    android:layout_width="240dp"
+                    android:layout_height="45dp"
+                    android:includeFontPadding="true"
+                    android:paddingStart="15dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/edittext_bkg" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:padding="10dp"
-                        android:text="Issue Books"
-                        android:textSize="35dp"
-                        android:textStyle="bold" />
+                <Spinner
+                    android:id="@+id/YearSpin"
+                    android:layout_width="240dp"
+                    android:layout_height="45dp"
+                    android:includeFontPadding="true"
+                    android:paddingStart="15dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/edittext_bkg" />
 
-                </androidx.cardview.widget.CardView>
+                <Button
+                    android:id="@+id/btnIssue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/teal_200"
+                    android:text="Issue"
+                    app:cornerRadius="30dp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    tools:layout_editor_absoluteX="0dp"
-                    tools:layout_editor_absoluteY="0dp">
-
-                    <EditText
-                        android:id="@+id/etBookID"
-                        android:layout_width="240dp"
-                        android:layout_height="45dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="100dp"
-                        android:background="@drawable/edittext_bkg"
-                        android:ems="10"
-                        android:hint="   b o o k  I D"
-                        android:inputType="number"
-                        android:textStyle="bold|italic" />
-
-                    <EditText
-                        android:id="@+id/etTitle"
-                        android:layout_width="240dp"
-                        android:layout_height="45dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/edittext_bkg"
-                        android:ems="10"
-                        android:hint="   t i t l e"
-                        android:inputType="textPersonName"
-                        android:textStyle="bold|italic" />
-
-                    <EditText
-                        android:id="@+id/etAuthor"
-                        android:layout_width="240dp"
-                        android:layout_height="45dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/edittext_bkg"
-                        android:ems="10"
-                        android:hint="   a u t h o r"
-                        android:inputType="textPersonName"
-                        android:textStyle="bold|italic" />
-
-                    <EditText
-                        android:id="@+id/etCategory"
-                        android:layout_width="240dp"
-                        android:layout_height="45dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/edittext_bkg"
-                        android:ems="10"
-                        android:hint="   c a t e g o r y"
-                        android:inputType="textPersonName"
-                        android:textStyle="bold|italic" />
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="290dp"
-                        android:layout_marginTop="20dp"
-                        android:backgroundTint="@color/cream_300"
-                        app:cardCornerRadius="30dp">
-
-                        <EditText
-                            android:id="@+id/etStudentID"
-                            android:layout_width="240dp"
-                            android:layout_height="45dp"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="-100dp"
-                            android:background="@drawable/edittext_bkg"
-                            android:ems="10"
-                            android:hint="   s t u d e n t  I D"
-                            android:inputType="number"
-                            android:textStyle="bold|italic" />
-
-                        <EditText
-                            android:id="@+id/etName"
-                            android:layout_width="240dp"
-                            android:layout_height="45dp"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="-50dp"
-                            android:background="@drawable/edittext_bkg"
-                            android:ems="10"
-                            android:hint="   n a m e"
-                            android:inputType="textPersonName"
-                            android:textStyle="bold|italic" />
-
-                        <Spinner
-                            android:id="@+id/CourseSpin"
-                            android:layout_width="240dp"
-                            android:layout_height="45dp"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="0dp"
-                            android:background="@drawable/edittext_bkg" />
-
-                        <Spinner
-                            android:id="@+id/YearSpin"
-                            android:layout_width="240dp"
-                            android:layout_height="45dp"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="50dp"
-                            android:background="@drawable/edittext_bkg" />
-
-                        <Button
-                            android:id="@+id/btnIssue"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="bottom"
-                            android:layout_marginLeft="40dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="Issue"
-                            app:cornerRadius="30dp" />
-
-                        <Button
-                            android:id="@+id/btnClear"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="bottom"
-                            android:layout_marginLeft="150dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="Clear"
-                            app:cornerRadius="30dp" />
-                    </androidx.cardview.widget.CardView>
-                </LinearLayout>
+                <Button
+                    android:id="@+id/btnClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="205dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/teal_200"
+                    android:text="Clear"
+                    app:cornerRadius="30dp" />
             </androidx.cardview.widget.CardView>
-
         </LinearLayout>
-    </ScrollView>
-
-
-</FrameLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
