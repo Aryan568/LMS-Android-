@@ -29,8 +29,8 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="220dp"
-            android:layout_height="80dp"
-            android:layout_marginLeft="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="65dp"
             android:layout_marginTop="15dp"
             app:cardCornerRadius="30dp">
 
@@ -57,113 +57,113 @@
             <EditText
                 android:id="@+id/etBookID"
                 android:layout_width="240dp"
-                android:layout_height="45dp"
-                android:includeFontPadding="true"
-                android:paddingStart="18dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="120dp"
                 android:background="@drawable/edittext_bkg"
                 android:ems="10"
                 android:hint="   b o o k  I D"
+                android:includeFontPadding="true"
                 android:inputType="number"
+                android:paddingStart="18dp"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/etTitle"
                 android:layout_width="240dp"
-                android:layout_height="45dp"
-                android:includeFontPadding="true"
-                android:paddingStart="18dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="7dp"
                 android:background="@drawable/edittext_bkg"
                 android:ems="10"
                 android:hint="   t i t l e"
+                android:includeFontPadding="true"
                 android:inputType="textPersonName"
+                android:paddingStart="18dp"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/etAuthor"
                 android:layout_width="240dp"
-                android:layout_height="45dp"
-                android:includeFontPadding="true"
-                android:paddingStart="18dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="7dp"
                 android:background="@drawable/edittext_bkg"
                 android:ems="10"
                 android:hint="   a u t h o r"
+                android:includeFontPadding="true"
                 android:inputType="textPersonName"
+                android:paddingStart="18dp"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/etCategory"
                 android:layout_width="240dp"
-                android:layout_height="45dp"
-                android:includeFontPadding="true"
-                android:paddingStart="18dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="7dp"
                 android:background="@drawable/edittext_bkg"
                 android:ems="10"
                 android:hint="   c a t e g o r y"
+                android:includeFontPadding="true"
                 android:inputType="textPersonName"
+                android:paddingStart="18dp"
                 android:textStyle="bold" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="310dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="30dp"
                 android:backgroundTint="#3D8794"
                 app:cardCornerRadius="30dp">
 
                 <EditText
                     android:id="@+id/etStudentID"
                     android:layout_width="240dp"
-                    android:layout_height="45dp"
-                    android:includeFontPadding="true"
-                    android:paddingStart="18dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="-100dp"
                     android:background="@drawable/edittext_bkg"
                     android:ems="10"
                     android:hint="   s t u d e n t  I D"
+                    android:includeFontPadding="true"
                     android:inputType="number"
+                    android:paddingStart="18dp"
                     android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/etName"
                     android:layout_width="240dp"
-                    android:layout_height="45dp"
-                    android:includeFontPadding="true"
-                    android:paddingStart="18dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="-50dp"
                     android:background="@drawable/edittext_bkg"
                     android:ems="10"
                     android:hint="   n a m e"
+                    android:includeFontPadding="true"
                     android:inputType="textPersonName"
+                    android:paddingStart="18dp"
                     android:textStyle="bold" />
 
                 <Spinner
                     android:id="@+id/CourseSpin"
                     android:layout_width="240dp"
-                    android:layout_height="45dp"
-                    android:includeFontPadding="true"
-                    android:paddingStart="15dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="0dp"
-                    android:background="@drawable/edittext_bkg" />
+                    android:background="@drawable/edittext_bkg"
+                    android:includeFontPadding="true"
+                    android:paddingStart="15dp" />
 
                 <Spinner
                     android:id="@+id/YearSpin"
                     android:layout_width="240dp"
-                    android:layout_height="45dp"
-                    android:includeFontPadding="true"
-                    android:paddingStart="15dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="50dp"
-                    android:background="@drawable/edittext_bkg" />
+                    android:background="@drawable/edittext_bkg"
+                    android:includeFontPadding="true"
+                    android:paddingStart="15dp" />
 
                 <Button
                     android:id="@+id/btnIssue"
