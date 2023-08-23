@@ -1,24 +1,22 @@
 package com.example.lms;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 public class Dashboard extends AppCompatActivity {
-    ImageButton books, issue, student;
+    CardView books, issue, student;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-        books= findViewById(R.id.btn_manageBooks);
-        issue= findViewById(R.id.btn_issueBooks);
-        student= findViewById(R.id.btn_addStudent);
+        books = findViewById(R.id.btn_manageBooks);
+        issue = findViewById(R.id.btn_issueBooks);
+        student = findViewById(R.id.btn_addStudent);
 
         books.setOnClickListener(new View.OnClickListener() {
             @Override
