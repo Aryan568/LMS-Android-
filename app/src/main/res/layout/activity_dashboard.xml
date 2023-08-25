@@ -20,7 +20,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="Manage Books"
-            android:textSize="25dp" />
+            android:textSize="25sp" />
 
     </androidx.cardview.widget.CardView>
 
@@ -38,7 +38,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="Manage Students"
-            android:textSize="25dp" />
+            android:textSize="25sp" />
 
     </androidx.cardview.widget.CardView>
 
@@ -56,7 +56,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="Issue &amp; Submit Books"
-            android:textSize="25dp" />
+            android:textSize="25sp" />
 
     </androidx.cardview.widget.CardView>
 
